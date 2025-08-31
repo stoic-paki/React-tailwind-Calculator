@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Light Palette */
+  --color-chestnut: #973f29;
+  --color-lightCyan: #75C9C8;
+  --color-lightMunsell:#3891a6;
+  --color-lightCharcoal:#373F51;
+  --color-lightOlive:#32322C;
+  --color-lightWhite:#F7F4EA;
+  --color-lightWhiteHover:#dedcd7;
+  --color-lightAsperagus:#749c75;
+  --color-lightAsperagusHover:#5c815d;
+
+  /* Dark Palette */
+  --color-darkred:#854c5a;
+  --color-darkredHover:#543039;
+  --color-darkBlack:#050401;
+  --color-darkWhite:#E3E3E3;
+  --color-darkGreen:#4C8577;
+  --color-darkGreenHover:#3e695e;
+  --color-darkGray:#303036;
+  --color-darkGray2:#18181b;
+
+  /* fonts */
+    --font-poppins: 'Poppins', sans-serif; 
+}
+
+@layer components {
+
+  .light-gradient{
+    @apply bg-gradient-to-br from-cyan-100 via-sky-300 to-blue-500
+  }
+  .dark-gradient{
+    @apply bg-gradient-to-br from-gray-800 via-purple-900 to-black
+  }
+  
+  .btn{
+    @apply flex justify-center items-center p-2 h-15 w-15 rounded-[8px] border-2 font-poppins
+  }
+
+  .btn-long-hori-dark{
+    @apply flex justify-center items-center p-2 h-15 w-full  col-span-2 rounded-[8px] border-2 bg-darkred hover:bg-darkredHover border-darkWhite text-darkWhite
+  }
+
+  .btn-long-hori-light{
+    @apply flex justify-center items-center p-2 h-15 w-full  col-span-2 rounded-[8px] bg-lightAsperagus hover:bg-lightAsperagusHover border-2 text-lightWhite border-lightWhite
+  }
+
+  .btn-light{
+    @apply  border-lightOlive  bg-lightWhite hover:bg-lightWhiteHover text-lightOlive
+  }
+  .btn-dark{
+    @apply  border-darkWhite bg-darkGreen hover:bg-darkGreenHover text-darkWhite
+  }
+
+  .btn-op-light{
+    @apply bg-lightAsperagus hover:bg-lightAsperagusHover border-2 text-lightWhite border-lightWhite
+  }
+
+  .btn-op-dark{
+    @apply border-2 bg-darkred hover:bg-darkredHover border-darkWhite text-darkWhite
+  }
+
+  .calc-light{
+    @apply  bg-lightMunsell h-[90vh] w-[90vw] md:w-[30vw] border-2 rounded-2xl p-5 flex flex-col gap-5 justify-between items-center
+  }
+  .calc-dark{
+    @apply bg-darkGray h-[90vh] w-[90vw] md:w-[30vw] border-2 rounded-2xl p-5 flex flex-col gap-5 justify-between items-center
+  }
+
+  .display-light{
+    @apply bg-lightWhite border-2 border-lightCharcoal
+  }
+  .display-dark{
+    @apply bg-darkGray2 border-2 border-darkGreen text-darkGreen
+  }
+  .display-bar-light{
+    @apply border-t-2 border-lightCharcoal
+  }
+  .display-bar-dark{
+    @apply border-t-2 border-darkGreen
+  }
+}
+
