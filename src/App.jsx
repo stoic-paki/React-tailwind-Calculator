@@ -13,13 +13,6 @@ const App = () => {
   let [upperDisplay, setUpperDisplay] = useState("");
   let [lowerDisplay, setLowerDisplay] = useState("");
 
-  // evaluation vals
-  // let first_operand;
-  // let second_operand;
-  // let operator_operand;
-
-  // checking to see if there is another one operator if have then evaluate
-
   const BackSpace = () => {
     try {
       let new_Str = upperDisplay.slice(0, upperDisplay.length - 1);
@@ -65,7 +58,7 @@ const GetBtnVal = (e) => {
     <div className={`h-[100vh] w-[100vw] flex justify-center items-center ${darkMode? "dark-gradient":"light-gradient"}`}>
       <div className={darkMode ? "calc-dark" : "calc-light"}>
         <div
-          className={`screen border-2 p-2 rounded-2xl  h-[20%] w-[100%] flex flex-col justify-between items-center ${
+          className={`screen border-2 p-2 rounded-2xl  h-[15vh] w-[100%] flex flex-col justify-between items-center ${
             darkMode ? "display-dark" : "display-light"
           }`}
         >
